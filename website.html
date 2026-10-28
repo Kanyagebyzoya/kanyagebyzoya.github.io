@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Pribadi</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fffdf7;
+            color: #35412e;
+        }
+
+        /* HEADER */
+        header {
+            background-color: #fff1c7;
+            text-align: center;
+            padding: 35px 20px;
+        }
+
+        header h1 {
+            color: #527b38;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 16px;
+        }
+
+        /* NAVIGASI */
+        nav {
+            background-color: #fff8e5;
+            padding: 15px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #527b38;
+            margin: 10px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #d18b83;
+        }
+
+        /* CONTAINER */
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: auto;
+            padding: 30px 0;
+        }
+
+        h2 {
+            text-align: center;
+            color: #527b38;
+            margin-bottom: 25px;
+        }
+
+        /* SITEMAP */
+        .homepage {
+            width: 300px;
+            max-width: 100%;
+            margin: 20px auto;
+            padding: 25px;
+            background-color: #fff1c7;
+            border: 2px solid #c9b85d;
+            border-radius: 20px;
+            text-align: center;
+            font-size: 22px;
+            font-weight: bold;
+            color: #527b38;
+        }
+
+        .sitemap {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .branch {
+            text-align: center;
+        }
+
+        .branch h3 {
+            background-color: #f9d9d5;
+            border: 2px solid #c9b85d;
+            border-radius: 30px;
+            padding: 18px 10px;
+            margin-bottom: 20px;
+        }
+
+        .branch a {
+            display: block;
+            background-color: #f9d9d5;
+            border: 1px solid #c9b85d;
+            border-radius: 25px;
+            padding: 15px 8px;
+            margin: 12px 0;
+            text-decoration: none;
+            color: #35412e;
+            transition: 0.3s;
+        }
+
+        .branch a:hover {
+            background-color: #fff1c7;
+            transform: translateY(-3px);
+        }
+
+        /* BAGIAN KONTEN */
+        section {
+            margin-top: 50px;
+            padding: 30px;
+            background-color: #fff8e8;
+            border-radius: 20px;
+            scroll-margin-top: 85px;
+        }
+
+        .content {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            background-color: white;
+            padding: 25px;
+            border-radius: 15px;
+            border: 1px solid #eadfae;
+            line-height: 1.8;
+        }
+
+        .card h3 {
+            color: #527b38;
+            margin-bottom: 10px;
+        }
+
+        /* TOMBOL KONTAK */
+        .contact a {
+            display: inline-block;
+            padding: 12px 20px;
+            margin: 10px 10px 0 0;
+            background-color: #527b38;
+            color: white;
+            text-decoration: none;
+            border-radius: 20px;
+        }
+
+        .contact a:hover {
+            background-color: #3e602b;
+        }
+
+        /* FOOTER */
+        footer {
+            margin-top: 40px;
+            padding: 25px;
+            background-color: #fff1c7;
+            text-align: center;
+            color: #527b38;
+        }
+
+        /* RESPONSIVE UNTUK HP */
+        @media (max-width: 768px) {
+            .sitemap {
+                grid-template-columns: 1fr;
+            }
+
+            .content {
+                grid-template-columns: 1fr;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 7px;
+            }
+
+            section {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HOMEPAGE -->
+    <header id="home">
+        <h1>Portofolio Pribadi</h1>
+        <p>Selamat datang di website portofolio saya!</p>
+        <p>Mengenal diri, kemampuan, pendidikan, dan pengalaman saya.</p>
+    </header>
+
+    <!-- MENU NAVIGASI -->
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#tentang">Tentang Saya</a>
+        <a href="#riwayat">Riwayat & Portofolio</a>
+        <a href="#hubungi">Hubungi Saya</a>
+    </nav>
+
+    <div class="container">
+
+        <!-- VISUAL SITEMAP -->
+        <h2>Visual Sitemap Website</h2>
+
+        <div class="homepage">
+            HOMEPAGE
+        </div>
+
+        <div class="sitemap">
+
+            <!-- TENTANG SAYA -->
+            <div class="branch">
+                <h3>Tentang Saya</h3>
+                <a href="#biodata">Biodata</a>
+                <a href="#keahlian">Keahlian</a>
+            </div>
+
+            <!-- RIWAYAT DAN PORTOFOLIO -->
+            <div class="branch">
+                <h3>Riwayat & Portofolio</h3>
+                <a href="#pendidikan">Pendidikan</a>
+                <a href="#pengalaman">Pengalaman</a>
+            </div>
+
+            <!-- HUBUNGI SAYA -->
+            <div class="branch">
+                <h3>Hubungi Saya</h3>
+                <a href="#email">Email</a>
+                <a href="#instagram">Instagram</a>
+            </div>
+
+        </div>
+
+        <!-- TENTANG SAYA -->
+        <section id="tentang">
+            <h2>Tentang Saya</h2>
+
+            <div class="content">
+
+                <div class="card" id="biodata">
+                    <h3>Biodata</h3>
+                    <p><strong>Nama:</strong> Nama Anda</p>
+                    <p><strong>Status:</strong> Mahasiswa</p>
+                    <p><strong>Tempat, Tanggal Lahir:</strong> Isi di sini</p>
+                    <p><strong>Deskripsi:</strong> Saya adalah pribadi yang
+                    senang belajar, mengembangkan kemampuan, dan mencoba
+                    hal-hal baru untuk meningkatkan kualitas diri.</p>
+                </div>
+
+                <div class="card" id="keahlian">
+                    <h3>Keahlian</h3>
+                    <p>Beberapa kemampuan yang saya miliki:</p>
+                    <ul>
+                        <li>Komunikasi</li>
+                        <li>Kerja sama tim</li>
+                        <li>Kreativitas</li>
+                        <li>Penggunaan teknologi</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- RIWAYAT DAN PORTOFOLIO -->
+        <section id="riwayat">
+            <h2>Riwayat & Portofolio</h2>
+
+            <div class="content">
+
+                <div class="card" id="pendidikan">
+                    <h3>Pendidikan</h3>
+                    <p><strong>Nama Institusi:</strong> Nama Sekolah atau
+                    Perguruan Tinggi</p>
+                    <p><strong>Program Studi:</strong> Isi program studi</p>
+                    <p><strong>Tahun:</strong> Isi tahun pendidikan</p>
+                </div>
+
+                <div class="card" id="pengalaman">
+                    <h3>Pengalaman</h3>
+                    <p>Bagian ini berisi pengalaman organisasi, kegiatan,
+                    pelatihan, proyek, atau karya yang pernah saya lakukan.</p>
+                    <p>Tambahkan pengalaman dan dokumentasi karya Anda
+                    di bagian ini.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- HUBUNGI SAYA -->
+        <section id="hubungi">
+            <h2>Hubungi Saya</h2>
+
+            <div class="card contact">
+
+                <p>Anda dapat menghubungi saya melalui media berikut:</p>
+
+                <p id="email">
+                    <a href="mailto:emailanda@example.com">
+                        Email Saya
+                    </a>
+                </p>
+
+                <p id="instagram">
+                    <a href="https://www.instagram.com/"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        Instagram Saya
+                    </a>
+                </p>
+
+            </div>
+        </section>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 Portofolio Pribadi</p>
+        <p>Dibuat menggunakan HTML dan CSS</p>
+    </footer>
+
+</body>
+</html>
