@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio - Kanya Geby Zoya</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        .bg-mindmap-main { background-color: #FFFBEB; }
+        .bg-mindmap-yellow { background-color: #FEF3C7; }
+        .bg-mindmap-peach { background-color: #FFEDD5; }
+        .bg-mindmap-pink { background-color: #FCE7F3; }
+        .border-mindmap-gold { border-color: #F59E0B; }
+        .border-mindmap-peach { border-color: #FDBA74; }
+        .border-mindmap-pink { border-color: #F9A8D4; }
+        .text-mindmap-green { color: #1C3D22; }
+    </style>
+</head>
+<body class="bg-amber-50/40 text-gray-800 antialiased min-h-screen flex flex-col">
+
+    <!-- HEADER (DASHBOARD Style) -->
+    <header class="bg-gradient-to-r from-amber-100 via-amber-200 to-amber-100 border-b-2 border-mindmap-gold sticky top-0 z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Title / DASHBOARD Box -->
+            <div class="flex items-center space-x-3">
+                <div class="w-12 h-12 rounded-full overflow-hidden border-2 border-amber-600 shadow-sm bg-white">
+                    <img src="IMG_20240910_234112_11zon (2).jpg" alt="Kanya Geby Zoya" class="w-full h-full object-cover">
+                </div>
+                <div>
+                    <span class="bg-amber-300 text-mindmap-green font-extrabold text-xs px-2.5 py-0.5 rounded-full uppercase tracking-wider border border-amber-500 block w-max">DASHBOARD</span>
+                    <h1 class="text-xl sm:text-2xl font-black text-mindmap-green tracking-tight">Kanya Geby Zoya</h1>
+                </div>
+            </div>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex items-center space-x-2">
+                <!-- 1. Tentang Saya (Dropdown) -->
+                <div class="relative group">
+                    <button class="flex items-center space-x-1.5 bg-amber-200/80 hover:bg-amber-300 text-mindmap-green px-4 py-2 rounded-full font-bold text-sm border border-amber-400 transition shadow-sm">
+                        <i data-lucide="user" class="w-4 h-4"></i>
+                        <span>Tentang Saya</span>
+                        <i data-lucide="chevron-down" class="w-4 h-4 text-amber-700 group-hover:rotate-180 transition-transform duration-200"></i>
+                    </button>
+                    <div class="absolute left-0 mt-1 w-48 bg-white rounded-2xl shadow-xl border border-amber-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform origin-top-left z-50 p-1.5">
+                        <a href="#biodata" class="flex items-center space-x-2 px-3 py-2 text-sm text-amber-900 rounded-xl hover:bg-orange-100 font-semibold transition">
+                            <i data-lucide="id-card" class="w-4 h-4 text-orange-600"></i>
+                            <span>Biodata</span>
+                        </a>
+                        <a href="#keahlian" class="flex items-center space-x-2 px-3 py-2 text-sm text-amber-900 rounded-xl hover:bg-orange-100 font-semibold transition">
+                            <i data-lucide="sparkles" class="w-4 h-4 text-orange-600"></i>
+                            <span>Keahlian</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 2. Riwayat & Portofolio (Dropdown) -->
+                <div class="relative group">
+                    <button class="flex items-center space-x-1.5 bg-amber-200/80 hover:bg-amber-300 text-mindmap-green px-4 py-2 rounded-full font-bold text-sm border border-amber-400 transition shadow-sm">
+                        <i data-lucide="briefcase" class="w-4 h-4"></i>
+                        <span>Riwayat & Portofolio</span>
+                        <i data-lucide="chevron-down" class="w-4 h-4 text-amber-700 group-hover:rotate-180 transition-transform duration-200"></i>
+                    </button>
+                    <div class="absolute left-0 mt-1 w-52 bg-white rounded-2xl shadow-xl border border-amber-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform origin-top-left z-50 p-1.5">
+                        <a href="#pendidikan" class="flex items-center space-x-2 px-3 py-2 text-sm text-amber-900 rounded-xl hover:bg-orange-100 font-semibold transition">
+                            <i data-lucide="graduation-cap" class="w-4 h-4 text-amber-600"></i>
+                            <span>Pendidikan</span>
+                        </a>
+                        <a href="#pengalaman" class="flex items-center space-x-2 px-3 py-2 text-sm text-amber-900 rounded-xl hover:bg-orange-100 font-semibold transition">
+                            <i data-lucide="award" class="w-4 h-4 text-pink-600"></i>
+                            <span>Pengalaman</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 3. Hubungi Saya (Dropdown) -->
+                <div class="relative group">
+                    <button class="flex items-center space-x-1.5 bg-amber-200/80 hover:bg-amber-300 text-mindmap-green px-4 py-2 rounded-full font-bold text-sm border border-amber-400 transition shadow-sm">
+                        <i data-lucide="mail" class="w-4 h-4"></i>
+                        <span>Hubungi Saya</span>
+                        <i data-lucide="chevron-down" class="w-4 h-4 text-amber-700 group-hover:rotate-180 transition-transform duration-200"></i>
+                    </button>
+                    <div class="absolute right-0 mt-1 w-64 bg-white rounded-2xl shadow-xl border border-amber-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform origin-top-right z-50 p-2">
+                        <a href="mailto:Kanyagebyzoya97@gmail.com" class="flex items-center space-x-3 px-3 py-2 text-xs text-amber-900 rounded-xl hover:bg-orange-100 font-semibold transition">
+                            <i data-lucide="mail" class="w-4 h-4 text-red-500 shrink-0"></i>
+                            <span class="truncate">Kanyagebyzoya97@gmail.com</span>
+                        </a>
+                        <a href="https://instagram.com/kanyagz_" target="_blank" class="flex items-center space-x-3 px-3 py-2 text-xs text-amber-900 rounded-xl hover:bg-orange-100 font-semibold transition">
+                            <i data-lucide="instagram" class="w-4 h-4 text-pink-600 shrink-0"></i>
+                            <span>Kanyagz_</span>
+                        </a>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Mobile Menu Toggle Button -->
+            <button id="mobile-menu-btn" class="md:hidden p-2 rounded-xl bg-amber-300 text-mindmap-green hover:bg-amber-400 focus:outline-none">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Container -->
+        <div id="mobile-menu" class="hidden md:hidden bg-amber-100/95 border-b border-amber-300 px-4 pt-2 pb-6 space-y-3">
+            <div>
+                <p class="text-xs font-black text-amber-800 uppercase tracking-wider mb-1">Tentang Saya</p>
+                <div class="grid grid-cols-2 gap-2">
+                    <a href="#biodata" class="bg-amber-200 text-amber-900 px-3 py-2 rounded-xl text-xs font-semibold flex items-center space-x-2">
+                        <i data-lucide="id-card" class="w-3.5 h-3.5"></i> <span>Biodata</span>
+                    </a>
+                    <a href="#keahlian" class="bg-amber-200 text-amber-900 px-3 py-2 rounded-xl text-xs font-semibold flex items-center space-x-2">
+                        <i data-lucide="sparkles" class="w-3.5 h-3.5"></i> <span>Keahlian</span>
+                    </a>
+                </div>
+            </div>
+            <div>
+                <p class="text-xs font-black text-amber-800 uppercase tracking-wider mb-1">Riwayat & Portofolio</p>
+                <div class="grid grid-cols-2 gap-2">
+                    <a href="#pendidikan" class="bg-amber-200 text-amber-900 px-3 py-2 rounded-xl text-xs font-semibold flex items-center space-x-2">
+                        <i data-lucide="graduation-cap" class="w-3.5 h-3.5"></i> <span>Pendidikan</span>
+                    </a>
+                    <a href="#pengalaman" class="bg-amber-200 text-amber-900 px-3 py-2 rounded-xl text-xs font-semibold flex items-center space-x-2">
+                        <i data-lucide="award" class="w-3.5 h-3.5"></i> <span>Pengalaman</span>
+                    </a>
+                </div>
+            </div>
+            <div>
+                <p class="text-xs font-black text-amber-800 uppercase tracking-wider mb-1">Hubungi Saya</p>
+                <div class="flex flex-col space-y-1">
+                    <a href="mailto:Kanyagebyzoya97@gmail.com" class="bg-amber-200 text-amber-900 px-3 py-2 rounded-xl text-xs font-semibold flex items-center space-x-2">
+                        <i data-lucide="mail" class="w-3.5 h-3.5 text-red-500"></i> <span>Kanyagebyzoya97@gmail.com</span>
+                    </a>
+                    <a href="https://instagram.com/kanyagz_" target="_blank" class="bg-amber-200 text-amber-900 px-3 py-2 rounded-xl text-xs font-semibold flex items-center space-x-2">
+                        <i data-lucide="instagram" class="w-3.5 h-3.5 text-pink-600"></i> <span>Kanyagz_</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN CONTAINER WITH SIDEBAR & CONTENT -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex-grow flex flex-col md:flex-row gap-8">
+        
+        <!-- SIDEBAR -->
+        <aside class="w-full md:w-72 shrink-0 space-y-6">
+            <!-- Sidebar Profile Card -->
+            <div class="bg-white p-6 rounded-3xl border-2 border-amber-300 shadow-md text-center sticky top-28">
+                <div class="relative w-36 h-36 mx-auto mb-4">
+                    <img src="IMG_20240910_234112_11zon (2).jpg" alt="Foto Kanya Geby Zoya" class="w-full h-full object-cover rounded-2xl shadow-md border-2 border-amber-400">
+                    <div class="absolute -bottom-2 -right-2 bg-amber-400 p-2 rounded-xl text-amber-900 shadow">
+                        <i data-lucide="heart" class="w-5 h-5 fill-amber-700"></i>
+                    </div>
+                </div>
+
+                <h2 class="text-lg font-black text-mindmap-green">Kanya Geby Zoya</h2>
+                <p class="text-xs font-bold text-amber-700 bg-amber-100 px-3 py-1 rounded-full inline-block mt-1 border border-amber-300">
+                    Mahasiswi PGPAUD & Guru Privat
+                </p>
+
+                <div class="mt-6 pt-6 border-t border-amber-100 text-left space-y-3 text-xs">
+                    <div class="flex items-center space-x-2 text-gray-700">
+                        <i data-lucide="map-pin" class="w-4 h-4 text-amber-600 shrink-0"></i>
+                        <span>Universitas Negeri Medan</span>
+                    </div>
+                    <div class="flex items-center space-x-2 text-gray-700">
+                        <i data-lucide="book-open" class="w-4 h-4 text-amber-600 shrink-0"></i>
+                        <span>Pendidikan Guru PAUD</span>
+                    </div>
+                </div>
+
+                <!-- Fast Jump Links -->
+                <div class="mt-6 pt-6 border-t border-amber-100">
+                    <p class="text-[11px] font-black uppercase tracking-wider text-amber-800 mb-2">Navigasi Cepat</p>
+                    <div class="flex flex-wrap gap-1.5 justify-center">
+                        <a href="#biodata" class="bg-orange-100 hover:bg-orange-200 text-orange-900 text-[11px] px-2.5 py-1 rounded-lg font-bold transition border border-orange-300">Biodata</a>
+                        <a href="#keahlian" class="bg-orange-100 hover:bg-orange-200 text-orange-900 text-[11px] px-2.5 py-1 rounded-lg font-bold transition border border-orange-300">Keahlian</a>
+                        <a href="#pendidikan" class="bg-amber-100 hover:bg-amber-200 text-amber-900 text-[11px] px-2.5 py-1 rounded-lg font-bold transition border border-amber-300">Pendidikan</a>
+                        <a href="#pengalaman" class="bg-pink-100 hover:bg-pink-200 text-pink-900 text-[11px] px-2.5 py-1 rounded-lg font-bold transition border border-pink-300">Pengalaman</a>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- CONTENT -->
+        <main class="flex-grow space-y-10">
+
+            <!-- SECTION 1: TENTANG SAYA -->
+            <section class="space-y-6">
+                <!-- Section Header -->
+                <div class="flex items-center space-x-3 bg-amber-200/90 p-3 rounded-2xl border-2 border-amber-400">
+                    <div class="bg-amber-400 p-2 rounded-xl text-mindmap-green">
+                        <i data-lucide="user" class="w-6 h-6"></i>
+                    </div>
+                    <div>
+                        <span class="text-[10px] font-black uppercase text-amber-800 tracking-wider">Kategori Navigasi</span>
+                        <h2 class="text-xl font-black text-mindmap-green">Tentang Saya</h2>
+                    </div>
+                </div>
+
+                <!-- Sub-Section: BIODATA -->
+                <div id="biodata" class="bg-white p-6 sm:p-8 rounded-3xl border-2 border-orange-300 shadow-sm relative overflow-hidden">
+                    <div class="absolute top-0 right-0 bg-orange-200 text-orange-900 px-4 py-1 rounded-bl-2xl text-xs font-black border-l border-b border-orange-300">
+                        Biodata
+                    </div>
+                    
+                    <h3 class="text-2xl font-black text-amber-900 mb-4 flex items-center space-x-2">
+                        <span>Halo, Saya Kanya Geby Zoya</span>
+                        <span class="animate-bounce inline-block">👋</span>
+                    </h3>
+                    
+                    <div class="space-y-4 text-gray-700 leading-relaxed text-sm sm:text-base">
+                        <p>
+                            Saya merupakan mahasiswa aktif <strong>Universitas Negeri Medan</strong>, Jurusan <strong>Pendidikan Guru Pendidikan Anak Usia Dini (PGPAUD)</strong>. Selain menjalani perkuliahan, saya juga bekerja sebagai <strong>guru privat anak SD</strong>.
+                        </p>
+                        <p>
+                            Saya memiliki minat dalam bidang <strong>pendidikan, desain grafis, editing video, dan fotografi</strong>. Saya senang mempelajari hal-hal baru, mengembangkan keterampilan, serta mencoba berbagai ide kreatif. Melalui pengalaman mengajar dan kegiatan organisasi, saya belajar untuk bekerja sama, berkomunikasi, dan bertanggung jawab dalam menjalankan tugas.
+                        </p>
+                        <p>
+                            Saya berharap dapat terus mengembangkan kemampuan dan pengalaman, baik dalam bidang pendidikan maupun kreativitas digital, serta menghasilkan karya yang bermanfaat bagi orang lain.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Sub-Section: KEAHLIAN -->
+                <div id="keahlian" class="bg-white p-6 sm:p-8 rounded-3xl border-2 border-orange-300 shadow-sm relative">
+                    <div class="absolute top-0 right-0 bg-orange-200 text-orange-900 px-4 py-1 rounded-bl-2xl text-xs font-black border-l border-b border-orange-300">
+                        Keahlian
+                    </div>
+
+                    <h3 class="text-xl font-black text-amber-900 mb-6 flex items-center space-x-2">
+                        <i data-lucide="sparkles" class="w-5 h-5 text-orange-500"></i>
+                        <span>Keahlian & Keterampilan</span>
+                    </h3>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <!-- Skill Card 1 -->
+                        <div class="bg-orange-50/80 p-5 rounded-2xl border border-orange-200 hover:shadow-md transition">
+                            <div class="flex items-center space-x-3 mb-2">
+                                <div class="bg-orange-200 p-2 rounded-xl text-orange-800">
+                                    <i data-lucide="palette" class="w-5 h-5"></i>
+                                </div>
+                                <h4 class="font-bold text-gray-900 text-sm">1. Desain Grafis & Kreatif Visual</h4>
+                            </div>
+                            <p class="text-xs text-gray-600 leading-relaxed pl-10">
+                                Mampu menggunakan <strong>Canva</strong> dan <strong>PixelLab</strong> untuk membuat poster, postingan Instagram, background/thumbnail, dan logo. Mampu mengedit teks, menghapus latar belakang foto, serta mengatur warna dan tata letak desain.
+                            </p>
+                        </div>
+
+                        <!-- Skill Card 2 -->
+                        <div class="bg-orange-50/80 p-5 rounded-2xl border border-orange-200 hover:shadow-md transition">
+                            <div class="flex items-center space-x-3 mb-2">
+                                <div class="bg-orange-200 p-2 rounded-xl text-orange-800">
+                                    <i data-lucide="video" class="w-5 h-5"></i>
+                                </div>
+                                <h4 class="font-bold text-gray-900 text-sm">2. Editing & Animasi Video</h4>
+                            </div>
+                            <p class="text-xs text-gray-600 leading-relaxed pl-10">
+                                Mampu menggunakan <strong>CapCut</strong> untuk memotong & menggabungkan video, menyesuaikan audio, dan menambahkan subtitle otomatis. Mampu menggunakan <strong>Alight Motion</strong> untuk membuat video, menambahkan efek visual, dan transisi.
+                            </p>
+                        </div>
+
+                        <!-- Skill Card 3 -->
+                        <div class="bg-orange-50/80 p-5 rounded-2xl border border-orange-200 hover:shadow-md transition">
+                            <div class="flex items-center space-x-3 mb-2">
+                                <div class="bg-orange-200 p-2 rounded-xl text-orange-800">
+                                    <i data-lucide="camera" class="w-5 h-5"></i>
+                                </div>
+                                <h4 class="font-bold text-gray-900 text-sm">3. Fotografi & Editing Foto</h4>
+                            </div>
+                            <p class="text-xs text-gray-600 leading-relaxed pl-10">
+                                Mampu mengambil foto dengan memperhatikan pencahayaan, sudut pengambilan gambar (angle), dan komposisi. Mampu mengedit foto untuk menyesuaikan warna dan pencahayaan.
+                            </p>
+                        </div>
+
+                        <!-- Skill Card 4 -->
+                        <div class="bg-orange-50/80 p-5 rounded-2xl border border-orange-200 hover:shadow-md transition">
+                            <div class="flex items-center space-x-3 mb-2">
+                                <div class="bg-orange-200 p-2 rounded-xl text-orange-800">
+                                    <i data-lucide="file-spreadsheet" class="w-5 h-5"></i>
+                                </div>
+                                <h4 class="font-bold text-gray-900 text-sm">4. Administrasi & Pengolahan Data</h4>
+                            </div>
+                            <p class="text-xs text-gray-600 leading-relaxed pl-10">
+                                Mampu menggunakan <strong>Microsoft Excel</strong> untuk mengolah data dengan rumus dasar dan menyusun tabel. Mampu menggunakan <strong>Microsoft Word</strong> untuk membuat laporan, proposal, dan makalah berformat rapi.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 2: RIWAYAT & PORTOFOLIO -->
+            <section class="space-y-6">
+                <!-- Section Header -->
+                <div class="flex items-center space-x-3 bg-amber-200/90 p-3 rounded-2xl border-2 border-amber-400">
+                    <div class="bg-amber-400 p-2 rounded-xl text-mindmap-green">
+                        <i data-lucide="briefcase" class="w-6 h-6"></i>
+                    </div>
+                    <div>
+                        <span class="text-[10px] font-black uppercase text-amber-800 tracking-wider">Kategori Navigasi</span>
+                        <h2 class="text-xl font-black text-mindmap-green">Riwayat & Portofolio</h2>
+                    </div>
+                </div>
+
+                <!-- Sub-Section: PENDIDIKAN -->
+                <div id="pendidikan" class="bg-white p-6 sm:p-8 rounded-3xl border-2 border-orange-300 shadow-sm relative">
+                    <div class="absolute top-0 right-0 bg-orange-200 text-orange-900 px-4 py-1 rounded-bl-2xl text-xs font-black border-l border-b border-orange-300">
+                        Pendidikan
+                    </div>
+
+                    <h3 class="text-xl font-black text-amber-900 mb-6 flex items-center space-x-2">
+                        <i data-lucide="graduation-cap" class="w-6 h-6 text-amber-600"></i>
+                        <span>Riwayat Pendidikan</span>
+                    </h3>
+
+                    <div class="relative border-l-2 border-amber-300 ml-4 space-y-6">
+                        <!-- Kuliah -->
+                        <div class="relative pl-6">
+                            <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-amber-500 border-2 border-white"></div>
+                            <div class="bg-amber-50 p-4 rounded-2xl border border-amber-200">
+                                <span class="bg-amber-200 text-amber-900 text-[10px] font-extrabold px-2.5 py-0.5 rounded-full">2024 - Sekarang</span>
+                                <h4 class="font-bold text-gray-900 text-base mt-1">Kuliah (Perguruan Tinggi)</h4>
+                                <p class="text-xs font-semibold text-amber-800">Universitas Negeri Medan (UNIMED)</p>
+                                <p class="text-xs text-gray-600 mt-1">Mahasiswa aktif Jurusan Pendidikan Guru Pendidikan Anak Usia Dini (PGPAUD).</p>
+                            </div>
+                        </div>
+
+                        <!-- SMA -->
+                        <div class="relative pl-6">
+                            <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-amber-300 border-2 border-white"></div>
+                            <div class="bg-amber-50/60 p-4 rounded-2xl border border-amber-200">
+                                <span class="bg-amber-100 text-amber-800 text-[10px] font-extrabold px-2.5 py-0.5 rounded-full">2021 - 2024</span>
+                                <h4 class="font-bold text-gray-900 text-base mt-1">SMA (Sekolah Menengah Atas)</h4>
+                                <p class="text-xs text-gray-600 mt-1">Menyelesaikan sekolah menengah atas pada tahun 2024 dengan <strong>Jurusan IPA</strong>.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sub-Section: PENGALAMAN (Tabs / Grid for Kerja, PLP, Organisasi) -->
+                <div id="pengalaman" class="bg-white p-6 sm:p-8 rounded-3xl border-2 border-pink-300 shadow-sm relative">
+                    <div class="absolute top-0 right-0 bg-pink-200 text-pink-900 px-4 py-1 rounded-bl-2xl text-xs font-black border-l border-b border-pink-300">
+                        Pengalaman
+                    </div>
+
+                    <h3 class="text-xl font-black text-amber-900 mb-6 flex items-center space-x-2">
+                        <i data-lucide="award" class="w-6 h-6 text-pink-600"></i>
+                        <span>Pengalaman Kerja, PLP & Organisasi</span>
+                    </h3>
+
+                    <!-- Filter Tabs -->
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <button onclick="switchTab('all')" id="tab-all" class="exp-tab-btn active bg-pink-500 text-white px-4 py-1.5 rounded-full text-xs font-extrabold transition">
+                            Semua
+                        </button>
+                        <button onclick="switchTab('kerja')" id="tab-kerja" class="exp-tab-btn bg-pink-100 text-pink-900 hover:bg-pink-200 px-4 py-1.5 rounded-full text-xs font-extrabold transition border border-pink-300">
+                            1. Kerja
+                        </button>
+                        <button onclick="switchTab('plp')" id="tab-plp" class="exp-tab-btn bg-pink-100 text-pink-900 hover:bg-pink-200 px-4 py-1.5 rounded-full text-xs font-extrabold transition border border-pink-300">
+                            2. PLP
+                        </button>
+                        <button onclick="switchTab('organisasi')" id="tab-organisasi" class="exp-tab-btn bg-pink-100 text-pink-900 hover:bg-pink-200 px-4 py-1.5 rounded-full text-xs font-extrabold transition border border-pink-300">
+                            3. Organisasi
+                        </button>
+                    </div>
+
+                    <!-- Experience Items Container -->
+                    <div class="space-y-6">
+
+                        <!-- Item 1: KERJA -->
+                        <div class="exp-item exp-kerja bg-pink-50/50 p-5 rounded-2xl border-2 border-pink-200">
+                            <div class="flex flex-wrap justify-between items-start gap-2 mb-3">
+                                <div>
+                                    <span class="bg-pink-200 text-pink-900 text-[10px] font-black px-2.5 py-0.5 rounded-full uppercase border border-pink-300">Kerja</span>
+                                    <h4 class="text-lg font-bold text-gray-900 mt-1">Guru Les Privat</h4>
+                                </div>
+                                <span class="bg-white text-pink-800 text-xs font-extrabold px-3 py-1 rounded-xl shadow-sm border border-pink-200">
+                                    2025 – Sekarang
+                                </span>
+                            </div>
+                            <ul class="space-y-1.5 text-xs text-gray-700 list-disc list-inside leading-relaxed">
+                                <li>Mengajar siswa SD kelas 4 sesuai dengan kebutuhan dan kemampuan belajar siswa.</li>
+                                <li>Menyiapkan materi dan latihan soal untuk membantu siswa memahami pelajaran.</li>
+                                <li>Memantau perkembangan belajar siswa dan memberikan informasi kepada orang tua.</li>
+                                <li>Membantu siswa meningkatkan fokus, kemandirian, dan tanggung jawab dalam belajar.</li>
+                            </ul>
+                        </div>
+
+                        <!-- Item 2: PLP -->
+                        <div class="exp-item exp-plp bg-pink-50/50 p-5 rounded-2xl border-2 border-pink-200">
+                            <div class="flex flex-wrap justify-between items-start gap-2 mb-3">
+                                <div>
+                                    <span class="bg-pink-200 text-pink-900 text-[10px] font-black px-2.5 py-0.5 rounded-full uppercase border border-pink-300">PLP</span>
+                                    <h4 class="text-lg font-bold text-gray-900 mt-1">Pengalaman PLP (Pengenalan Lapangan Persekolahan)</h4>
+                                </div>
+                            </div>
+                            <ul class="space-y-1.5 text-xs text-gray-700 list-disc list-inside leading-relaxed">
+                                <li>Mengamati proses pembelajaran dan kegiatan di lingkungan sekolah.</li>
+                                <li>Membantu guru dalam menyiapkan dan melaksanakan kegiatan pembelajaran.</li>
+                                <li>Berinteraksi dengan siswa serta membantu mereka memahami materi pelajaran.</li>
+                                <li>Mempelajari pengelolaan kelas dan cara menghadapi kebutuhan belajar siswa.</li>
+                            </ul>
+                        </div>
+
+                        <!-- Item 3: ORGANISASI -->
+                        <div class="exp-item exp-organisasi bg-pink-50/50 p-5 rounded-2xl border-2 border-pink-200 space-y-4">
+                            <div class="flex flex-wrap justify-between items-start gap-2 border-b border-pink-200 pb-3">
+                                <div>
+                                    <span class="bg-pink-200 text-pink-900 text-[10px] font-black px-2.5 py-0.5 rounded-full uppercase border border-pink-300">Organisasi</span>
+                                    <h4 class="text-lg font-bold text-gray-900 mt-1">Badan Pengurus Harian (BPH) Gereja Siloam</h4>
+                                </div>
+                                <span class="bg-white text-pink-800 text-xs font-extrabold px-3 py-1 rounded-xl shadow-sm border border-pink-200">
+                                    2022 – 2026
+                                </span>
+                            </div>
+
+                            <!-- Role 1 -->
+                            <div class="pl-2 border-l-2 border-pink-400 space-y-1">
+                                <div class="flex justify-between items-center">
+                                    <h5 class="font-bold text-gray-900 text-sm">Koordinator Pemuda & Sosial</h5>
+                                    <span class="text-[11px] font-bold text-pink-700">2024–2026</span>
+                                </div>
+                                <ul class="space-y-1 text-xs text-gray-700 list-disc list-inside leading-relaxed">
+                                    <li>Mengoordinasikan tim yang terdiri dari dua orang dalam menjalankan kegiatan pemuda dan sosial.</li>
+                                    <li>Mendokumentasikan kegiatan dan kunjungan melalui fotografi dan videografi.</li>
+                                    <li>Merencanakan dan melaksanakan kegiatan untuk meningkatkan kebersamaan antarpemuda.</li>
+                                    <li>Mengatur kebutuhan dan jalannya kegiatan kunjungan sosial serta kegiatan antar komunitas.</li>
+                                </ul>
+                            </div>
+
+                            <!-- Role 2 -->
+                            <div class="pl-2 border-l-2 border-pink-300 space-y-1 pt-2">
+                                <div class="flex justify-between items-center">
+                                    <h5 class="font-bold text-gray-900 text-sm">Anggota Kreatif</h5>
+                                    <span class="text-[11px] font-bold text-pink-700">2022–2024</span>
+                                </div>
+                                <ul class="space-y-1 text-xs text-gray-700 list-disc list-inside leading-relaxed">
+                                    <li>Membantu mempersiapkan latihan, gladi bersih, dan pelaksanaan ibadah.</li>
+                                    <li>Mengoordinasikan pelayanan ibadah bersama anggota tim.</li>
+                                    <li>Membantu merencanakan dan melaksanakan kegiatan tahunan, seperti retret dan Kebaktian Kebangunan Rohani (KKR) Tour.</li>
+                                    <li>Melakukan evaluasi setelah kegiatan untuk memperbaiki pelaksanaan acara berikutnya.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 3: HUBUNGI SAYA -->
+            <section id="hubungi" class="bg-amber-100/80 p-6 sm:p-8 rounded-3xl border-2 border-amber-400 shadow-sm space-y-6">
+                <div class="flex items-center space-x-3">
+                    <div class="bg-amber-400 p-2 rounded-xl text-mindmap-green">
+                        <i data-lucide="mail" class="w-6 h-6"></i>
+                    </div>
+                    <div>
+                        <span class="text-[10px] font-black uppercase text-amber-800 tracking-wider">Kategori Navigasi</span>
+                        <h2 class="text-xl font-black text-mindmap-green">Hubungi Saya</h2>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <!-- Email Badge Card -->
+                    <a href="mailto:Kanyagebyzoya97@gmail.com" class="bg-white p-5 rounded-2xl border border-amber-300 flex items-center space-x-4 hover:shadow-md hover:border-amber-500 transition group">
+                        <div class="bg-orange-100 p-3 rounded-xl text-orange-600 group-hover:bg-orange-500 group-hover:text-white transition">
+                            <i data-lucide="mail" class="w-6 h-6"></i>
+                        </div>
+                        <div class="overflow-hidden">
+                            <span class="text-[10px] font-bold text-amber-700 uppercase tracking-wider block">Email</span>
+                            <span class="text-xs sm:text-sm font-bold text-gray-900 group-hover:text-amber-700 transition truncate block">
+                                Kanyagebyzoya97@gmail.com
+                            </span>
+                        </div>
+                    </a>
+
+                    <!-- Instagram Badge Card -->
+                    <a href="https://instagram.com/kanyagz_" target="_blank" class="bg-white p-5 rounded-2xl border border-amber-300 flex items-center space-x-4 hover:shadow-md hover:border-amber-500 transition group">
+                        <div class="bg-pink-100 p-3 rounded-xl text-pink-600 group-hover:bg-pink-500 group-hover:text-white transition">
+                            <i data-lucide="instagram" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <span class="text-[10px] font-bold text-amber-700 uppercase tracking-wider block">Instagram</span>
+                            <span class="text-xs sm:text-sm font-bold text-gray-900 group-hover:text-amber-700 transition block">
+                                Kanyagz_
+                            </span>
+                        </div>
+                    </a>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="bg-amber-200/80 border-t-2 border-mindmap-gold py-6 mt-12">
+        <div class="max-w-7xl mx-auto px-4 text-center text-xs font-bold text-mindmap-green space-y-1">
+            <p>2026 Kanya Geby Zoya</p>
+            <p class="text-[11px] text-amber-800 font-semibold">Terima kasih atas kunjungan anda.</p>
+        </div>
+    </footer>
+
+    <!-- Interactive Scripts -->
+    <script>
+        // Lucide Icons initialization
+        lucide.createIcons();
+
+        // Mobile Menu Toggle
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Filter tabs for experience section
+        function switchTab(tab) {
+            const tabs = document.querySelectorAll('.exp-tab-btn');
+            const items = document.querySelectorAll('.exp-item');
+
+            tabs.forEach(t => {
+                t.classList.remove('bg-pink-500', 'text-white');
+                t.classList.add('bg-pink-100', 'text-pink-900');
+            });
+
+            const activeTabBtn = document.getElementById('tab-' + tab);
+            if (activeTabBtn) {
+                activeTabBtn.classList.remove('bg-pink-100', 'text-pink-900');
+                activeTabBtn.classList.add('bg-pink-500', 'text-white');
+            }
+
+            items.forEach(item => {
+                if (tab === 'all') {
+                    item.style.display = 'block';
+                } else {
+                    if (item.classList.contains('exp-' + tab)) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                }
+            });
+        }
+    </script>
+</body>
+</html>
+```
